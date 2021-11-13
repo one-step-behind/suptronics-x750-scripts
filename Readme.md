@@ -2,6 +2,9 @@
 
 Shutdown scripts for SupTronics/Geekworm X750 UPS HAT for Rasperry Pi, based on the [original scripts from Geekworm](https://github.com/geekworm-com/x750). It also reads the status of address 0x14 which can be used to determine the charging status. Kudos goes to [_Anonymous user #19_ in the comments section of hardware the overview](https://wiki.geekworm.com/X750#end) for this hint.
 
+## Why
+I'm using these scripts in my [Portable Musicbox](http://showcase.visualgaze.de/portable-musicbox).
+
 ## Install scripts and services
 
 ```bash
