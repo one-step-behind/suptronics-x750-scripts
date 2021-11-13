@@ -1,0 +1,15 @@
+[Unit]
+Description=UPS X750 Shutdown Daemon
+DefaultDependencies=no
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/home/volumio/ups-x750/ups-x750-shutdown.sh
+SyslogIdentifier=UPSshutdownDaemon
+Restart=on-failure
+RestartSec=10
+User=volumio
+
+[Install]
+WantedBy=sysinit.target

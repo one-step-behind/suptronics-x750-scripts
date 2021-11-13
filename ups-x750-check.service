@@ -1,0 +1,15 @@
+[Unit]
+Description=UPS X750 Daemon
+DefaultDependencies=no
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/volumio/ups-x750/ups-x750-check.py
+SyslogIdentifier=UPS-X750-Check
+Restart=on-failure
+RestartSec=10
+User=volumio
+
+[Install]
+WantedBy=sysinit.target
