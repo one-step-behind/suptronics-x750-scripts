@@ -16,9 +16,11 @@ I'm using these scripts in my [Portable Musicbox](http://showcase.visualgaze.de/
 
 ## What is it doing
 
-`ups-x750-check` is **watching the batteries health** (voltage, capacity and charging state). If batteries were not charging and voltage and capacity reaching a _low limit_ it will shutdown the Pi safely and the power for the Pi is cut completely by the X750.
+`ups-x750-check` is **watching the batteries health** (voltage, capacity and charging state). If batteries were not charging and voltage and capacity reaching a _critical level_ it will shutdown the Pi safely and the power for the Pi is cut completely by the X750.
 
 `ups-x750-shutdown` is **polling the momentary switch** connected to the X750 board. If switch will be pressed for more than _4 seceonds_ the Pi shuts down safely and the power is cut completely by the X750.
+
+The power will be cut hard if the button is pressed more than 8 seconds. This "feature" is built into the MCU of the X750 and cannot be changed by any script or user.
 
 `ups-x750-test.py` can be run from console and display some values of the batteries and charging state, e.g.:
 
